@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" rx="20" fill="url(#g6)"/>
+  <rect x="15" y="15" width="370" height="190" rx="16" fill="#ffffff" stroke="#ccfbf1" stroke-width="2"/>
+  <circle cx="200" cy="78" r="36" fill="#f0fdf4" stroke="#10b981" stroke-width="3"/>
+  <path d="M190 64 C178 64, 172 78, 178 96 C182 104, 192 100, 192 88 Z" fill="#10b981" opacity="0.9"/>
+  <path d="M210 64 C222 64, 228 78, 222 96 C218 104, 208 100, 208 88 Z" fill="#10b981" opacity="0.9"/>
+  <path d="M148 126 L170 126 L180 110 L194 140 L204 118 L212 130 L220 126 L248 126" stroke="#059669" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="200" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">Respiratory Wellness &amp; Rehabilitation</text>
+  <text x="200" y="189" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Diaphragmatic Conditioning &amp; Smoke Cessation</text>
+</svg>

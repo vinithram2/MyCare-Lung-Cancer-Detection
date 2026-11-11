@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="gradTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="gradBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="gradHeat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="280" rx="24" fill="url(#gradBg)"/>
+  
+  <!-- Step 1: Input CT Scan -->
+  <g transform="translate(40, 45)">
+    <rect width="110" height="130" rx="14" fill="#020617" stroke="#334155" stroke-width="2"/>
+    <ellipse cx="42" cy="65" rx="16" ry="32" fill="#1e293b"/>
+    <ellipse cx="68" cy="65" rx="16" ry="32" fill="#1e293b"/>
+    <circle cx="48" cy="55" r="7" fill="#ef4444" opacity="0.9"/>
+    <text x="55" y="156" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Input CT Slice</text>
+    <text x="55" y="172" fill="#64748b" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">224 x 224 x 3</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M 165 110 L 195 110" stroke="#2dd4bf" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="193,105 203,110 193,115" fill="#2dd4bf"/>
+
+  <!-- Step 2: ResNet Feature Extractor -->
+  <g transform="translate(215, 30)">
+    <rect width="150" height="160" rx="16" fill="#0f766e" fill-opacity="0.2" stroke="#0d9488" stroke-width="2" stroke-dasharray="6 4"/>
+    <!-- Layer Blocks -->
+    <rect x="20" y="20" width="110" height="24" rx="6" fill="url(#gradTeal)"/>
+    <text x="75" y="36" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Conv 7x7 + MaxPool</text>
+    
+    <rect x="20" y="52" width="110" height="24" rx="6" fill="url(#gradTeal)"/>
+    <text x="75" y="68" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">ResBlock 1 &amp; 2</text>
+    
+    <rect x="20" y="84" width="110" height="24" rx="6" fill="url(#gradTeal)"/>
+    <text x="75" y="100" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">ResBlock 3 &amp; 4</text>
+    
+    <rect x="20" y="116" width="110" height="24" rx="6" fill="url(#gradTeal)"/>
+    <text x="75" y="132" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">AdaptiveAvgPool (512)</text>
+    
+    <text x="75" y="172" fill="#2dd4bf" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">ResNet-18 Backbone</text>
+    <text x="75" y="188" fill="#64748b" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Pretrained Deep Features</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 380 110 L 410 110" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="408,105 418,110 408,115" fill="#38bdf8"/>
+
+  <!-- Step 3: Grad-CAM Explainability Engine -->
+  <g transform="translate(430, 45)">
+    <rect width="130" height="130" rx="14" fill="#0369a1" fill-opacity="0.2" stroke="#0284c7" stroke-width="2"/>
+    <rect x="15" y="15" width="100" height="100" rx="10" fill="url(#gradHeat)" opacity="0.8"/>
+    <circle cx="55" cy="55" r="22" fill="#ffffff" opacity="0.6"/>
+    <text x="65" y="156" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Grad-CAM Visualizer</text>
+    <text x="65" y="172" fill="#64748b" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Target Activation Overlay</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M 575 110 L 605 110" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="603,105 613,110 603,115" fill="#f59e0b"/>
+
+  <!-- Step 4: Tri-Class Probability Softmax -->
+  <g transform="translate(625, 45)">
+    <rect width="140" height="130" rx="14" fill="#1e1b4b" fill-opacity="0.4" stroke="#6366f1" stroke-width="2"/>
+    <rect x="15" y="18" width="110" height="24" rx="6" fill="#15803d"/>
+    <text x="70" y="34" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Normal: 98.8%</text>
+    
+    <rect x="15" y="48" width="110" height="24" rx="6" fill="#b45309"/>
+    <text x="70" y="64" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Benign: 99.8%</text>
+    
+    <rect x="15" y="78" width="110" height="24" rx="6" fill="#b91c1c"/>
+    <text x="70" y="94" fill="#ffffff" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Malignant: 98.3%</text>
+    
+    <text x="70" y="156" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Softmax Output</text>
+    <text x="70" y="172" fill="#64748b" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Linear (512 -> 256 -> 3)</text>
+  </g>
+
+  <!-- Bottom Metric Banner -->
+  <rect x="40" y="225" width="725" height="36" rx="10" fill="#0f172a" stroke="#334155"/>
+  <text x="400" y="248" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">
+    Balanced Dataset Training &#8226; ResNet-18 Core &#8226; Label-Smoothed Cross-Entropy Loss &#8226; 99.4% Accuracy
+  </text>
+</svg>

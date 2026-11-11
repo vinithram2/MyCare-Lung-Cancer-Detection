@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" rx="20" fill="url(#g4)"/>
+  <rect x="15" y="15" width="370" height="190" rx="16" fill="#ffffff" stroke="#d1fae5" stroke-width="2"/>
+  <circle cx="200" cy="78" r="34" fill="#ecfdf5" stroke="#059669" stroke-width="3"/>
+  <path d="M178 95 L222 58 L214 49 L170 86 Z" fill="#059669"/>
+  <circle cx="173" cy="91" r="3.5" fill="#10b981"/>
+  <path d="M200 42 C214 42, 226 46, 226 68 C226 95, 200 108, 200 108 C200 108, 174 95, 174 68 C174 46, 186 42, 200 42 Z" fill="none" stroke="#059669" stroke-width="2"/>
+  <text x="200" y="172" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">Minimally Invasive Thoracic Surgery</text>
+  <text x="200" y="189" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">VATS / Robotic Lobectomy &amp; Resection</text>
+</svg>

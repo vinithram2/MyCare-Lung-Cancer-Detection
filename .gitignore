@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+backend/venv/
+backend/env/
+frontend/node_modules/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Databases & local logs
+*.db
+*.sqlite3
+pulmoscan.db
+backend/pulmoscan.db
+*.log
+
+# Large Raw Archives & root zips (Dataset/ contains the curated 49MB zip)
+archive (1).zip
+IQ_OTH_NCCD_Full_Lung_Cancer_Dataset.zip
+*.zip
+!Dataset/*.zip
+Lung_Cancer_Dataset_100_Samples/
+backend/data/
+frontend/dist/
+
+# Loose redundant documents in root (official copies are inside Project_Documents/)
+*.docx
+!Project_Documents/*.docx
+*.pptx
+!Project_Documents/*.pptx
+
+# OS and Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.gemini/

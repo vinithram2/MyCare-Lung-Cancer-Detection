@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gShield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="240" rx="20" fill="url(#gShield)"/>
+  <rect x="15" y="15" width="370" height="210" rx="16" fill="#ffffff" stroke="#ccfbf1" stroke-width="2"/>
+  
+  <!-- Shield Badge -->
+  <path d="M 200 45 C 230 45, 255 52, 255 85 C 255 125, 200 150, 200 150 C 200 150, 145 125, 145 85 C 145 52, 170 45, 200 45 Z" fill="#f0fdfa" stroke="#0d9488" stroke-width="3"/>
+  <circle cx="200" cy="85" r="16" fill="#0d9488"/>
+  <path d="M 193 85 L 198 90 L 208 78" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <text x="200" y="180" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0f766e" text-anchor="middle">Clinical Decision-Support Boundaries</text>
+  <text x="200" y="200" font-family="system-ui, sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Ethical AI Validation &#8226; Non-Autonomous Diagnosis</text>
+</svg>

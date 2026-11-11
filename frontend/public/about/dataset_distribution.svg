@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gNormal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="gBenign" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="gMalignant" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="500" height="240" rx="20" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <text x="250" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">IQ-OTH/NCCD Cohort Composition (2,077 Slices)</text>
+  
+  <!-- Bar 1: Malignant (1,346) -->
+  <text x="40" y="72" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#334155">Malignant (64.8%)</text>
+  <rect x="40" y="80" width="420" height="24" rx="8" fill="#f1f5f9"/>
+  <rect x="40" y="80" width="272" height="24" rx="8" fill="url(#gMalignant)"/>
+  <text x="320" y="96" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">1,346 Scans</text>
+  
+  <!-- Bar 2: Normal (631) -->
+  <text x="40" y="127" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#334155">Normal (30.4%)</text>
+  <rect x="40" y="135" width="420" height="24" rx="8" fill="#f1f5f9"/>
+  <rect x="40" y="135" width="128" height="24" rx="8" fill="url(#gNormal)"/>
+  <text x="178" y="151" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#16a34a">631 Scans</text>
+  
+  <!-- Bar 3: Benign (100) -->
+  <text x="40" y="182" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#334155">Benign (4.8% - Oversampled 1:1:1)</text>
+  <rect x="40" y="190" width="420" height="24" rx="8" fill="#f1f5f9"/>
+  <rect x="40" y="190" width="35" height="24" rx="8" fill="url(#gBenign)"/>
+  <text x="85" y="206" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#d97706">100 Scans</text>
+</svg>
