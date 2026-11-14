@@ -453,24 +453,10 @@ def build_master_deck():
         "Provides patient education rather than automated prescriptions.",
     ])
 
-    # ─── SLIDE 24: Future Scope ───
+    # ─── SLIDE 24: Conclusion & Summary ───
     s24 = prs.slides.add_slide(blank_layout)
-    add_header(s24, "23. Future Scope & Research Directions")
-    add_card(s24, Inches(0.8), Inches(1.7), Inches(5.6), Inches(5.2), "Algorithmic Upgrades", [
-        "Extend from 2D slices to full 3D volumetric CT segmentation.",
-        "Incorporate patient clinical history and EHR data fusion.",
-        "Automated nodule volume doubling time (VDT) calculation.",
-    ])
-    add_card(s24, Inches(6.8), Inches(1.7), Inches(5.7), Inches(5.2), "Clinical Deployment", [
-        "Integration into hospital DICOM PACS archives.",
-        "Multi-center clinical validation across regional hospitals.",
-        "Mobile/tablet application for oncology rounds.",
-    ])
-
-    # ─── SLIDE 25: Conclusion & Summary ───
-    s25 = prs.slides.add_slide(blank_layout)
-    add_header(s25, "24. Conclusion & Summary")
-    add_card(s25, Inches(0.8), Inches(1.7), Inches(11.7), Inches(5.2), "Key Takeaways of MyCare", [
+    add_header(s24, "23. Conclusion & Summary")
+    add_card(s24, Inches(0.8), Inches(1.7), Inches(11.7), Inches(5.2), "Key Takeaways of MyCare", [
         "Achieves 99.4% overall test accuracy with 100.0% recall on malignant tumors.",
         "Effectively resolves severe class imbalance using 1:1:1 weighted sampling.",
         "Overcomes black-box opacity through Grad-CAM visual attention localization.",
@@ -478,30 +464,30 @@ def build_master_deck():
         "Demonstrates high potential for proactive thoracic oncology screening.",
     ])
 
-    # ─── SLIDE 26: Thank You ───
-    s26 = prs.slides.add_slide(blank_layout)
-    bg26 = s26.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, prs.slide_width, prs.slide_height)
-    bg26.fill.solid()
-    bg26.fill.fore_color.rgb = C_DARK
-    bg26.line.fill.background()
-    tb26 = s26.shapes.add_textbox(Inches(1.0), Inches(2.0), Inches(11.3), Inches(4.0))
-    tf26 = tb26.text_frame
-    tf26.word_wrap = True
-    p26_title = tf26.paragraphs[0]
-    p26_title.text = "Thank You!"
-    p26_title.font.size = Pt(44)
-    p26_title.font.bold = True
-    p26_title.font.color.rgb = C_WHITE
-    p26_title.space_after = Pt(14)
-    p26_sub = tf26.add_paragraph()
-    p26_sub.text = "MyCare: Deep Learning Powered Lung Cancer Detection\nNMAM Institute of Technology (NMAMIT), Nitte\nProject Guide: Dr. Sandeep"
-    p26_sub.font.size = Pt(18)
-    p26_sub.font.color.rgb = C_CYAN
-    p26_sub.space_after = Pt(20)
-    p26_team = tf26.add_paragraph()
-    p26_team.text = "Team Members: VINITHRAM • VINITH V DEVADIGA • TEJAS N • VISHNU K"
-    p26_team.font.size = Pt(14)
-    p26_team.font.color.rgb = RGBColor(148, 163, 184)
+    # ─── SLIDE 25: Thank You ───
+    s25 = prs.slides.add_slide(blank_layout)
+    bg25 = s25.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, prs.slide_width, prs.slide_height)
+    bg25.fill.solid()
+    bg25.fill.fore_color.rgb = C_DARK
+    bg25.line.fill.background()
+    tb25 = s25.shapes.add_textbox(Inches(1.0), Inches(2.0), Inches(11.3), Inches(4.0))
+    tf25 = tb25.text_frame
+    tf25.word_wrap = True
+    p25_title = tf25.paragraphs[0]
+    p25_title.text = "Thank You!"
+    p25_title.font.size = Pt(44)
+    p25_title.font.bold = True
+    p25_title.font.color.rgb = C_WHITE
+    p25_title.space_after = Pt(14)
+    p25_sub = tf25.add_paragraph()
+    p25_sub.text = "MyCare: Deep Learning Powered Lung Cancer Detection\nNMAM Institute of Technology (NMAMIT), Nitte\nProject Guide: Dr. Sandeep"
+    p25_sub.font.size = Pt(18)
+    p25_sub.font.color.rgb = C_CYAN
+    p25_sub.space_after = Pt(20)
+    p25_team = tf25.add_paragraph()
+    p25_team.text = "Team Members: VINITHRAM • VINITH V DEVADIGA • TEJAS N • VISHNU K"
+    p25_team.font.size = Pt(14)
+    p25_team.font.color.rgb = RGBColor(148, 163, 184)
 
     # Save finalized presentation
     out_path = "MyCare_Lung_Cancer_Detection_Full.pptx"
